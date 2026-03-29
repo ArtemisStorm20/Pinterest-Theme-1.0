@@ -247,6 +247,13 @@ button:hover svg {
   color: var(--text-light) !important;
   border-bottom: 2px solid transparent !important;
   transition: color 0.2s, border-color 0.2s !important;
+  padding-top: 4px !important;
+  position: static !important;
+  top: unset !important;
+  z-index: auto !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: auto !important;
 }
 
 [role="tab"][aria-selected="true"],
