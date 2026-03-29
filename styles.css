@@ -1,0 +1,33 @@
+/* Pinterest Pastel Theme kleuren */
+:root {
+  --pinterest-pink: #ffe4ec;
+  --pinterest-white: #ffffff;
+  --pinterest-beige: #f7efe3;
+}
+
+body, .App, .mainContainer, [data-test-id="header"] {
+  background: var(--pinterest-white) !important;
+}
+
+/* Achtergrond van pins en kaarten */
+[data-test-id*="pin"], .GridItems, .Collection, .boardPin, .boardCard {
+  background: var(--pinterest-beige) !important;
+  border-radius: 12px !important;
+}
+
+/* Accentkleur voor knoppen en highlights */
+button, .Button, .button, .active, .selected {
+  background: var(--pinterest-pink) !important;
+  color: #b97a95 !important;
+  border: none !important;
+}
+
+/* Tekstkleuren */
+body, .App, .mainContainer, .boardPin, .boardCard, .GridItems {
+  color: #b97a95 !important;
+}
+
+/* Optioneel: hover effecten */
+button:hover, .Button:hover {
+  background: #ffd6e3 !important;
+}
