@@ -1,33 +1,341 @@
-/* Pinterest Pastel Theme kleuren */
+/* ============================================
+   Pinterest Pastel Theme — Zachte roze, beige & witte tinten
+   ============================================ */
+
 :root {
-  --pinterest-pink: #ffe4ec;
-  --pinterest-white: #ffffff;
-  --pinterest-beige: #f7efe3;
+  --blush:      #f5d5d5;
+  --rose:       #e8a5a5;
+  --rose-deep:  #c97b7b;
+  --petal:      #fce8e8;
+  --cream:      #fdf6f0;
+  --beige:      #f0e6d8;
+  --sand:       #ddd0bf;
+  --white:      #fffcfa;
+  --text:       #6b4f4f;
+  --text-light: #a68b8b;
 }
 
-body, .App, .mainContainer, [data-test-id="header"] {
-  background: var(--pinterest-white) !important;
+/* ─── Algemene pagina-achtergrond ─── */
+html,
+body,
+[data-test-id="homefeed-container"],
+._1ZVnrb,
+.XiG3d {
+  background-color: var(--cream) !important;
 }
 
-/* Achtergrond van pins en kaarten */
-[data-test-id*="pin"], .GridItems, .Collection, .boardPin, .boardCard {
-  background: var(--pinterest-beige) !important;
-  border-radius: 12px !important;
+/* ─── Navigatiebalk (header) ─── */
+header,
+[data-test-id="header"],
+.tBJ2a,
+._3H3-v,
+.PrimaryNav,
+[class*="PrimaryNav"],
+[class*="header"] {
+  background-color: var(--white) !important;
+  border-bottom: 1px solid var(--blush) !important;
+  box-shadow: 0 2px 16px rgba(200, 130, 130, 0.08) !important;
 }
 
-/* Accentkleur voor knoppen en highlights */
-button, .Button, .button, .active, .selected {
-  background: var(--pinterest-pink) !important;
-  color: #b97a95 !important;
-  border: none !important;
+/* ─── Zoekbalk ─── */
+input[type="search"],
+[data-test-id="search-box-input"],
+.HxBMB,
+[class*="searchInput"],
+[class*="SearchInput"] {
+  background-color: var(--petal) !important;
+  border: 1.5px solid var(--blush) !important;
+  color: var(--text) !important;
+  border-radius: 24px !important;
 }
 
-/* Tekstkleuren */
-body, .App, .mainContainer, .boardPin, .boardCard, .GridItems {
-  color: #b97a95 !important;
+input[type="search"]:focus,
+[data-test-id="search-box-input"]:focus {
+  background-color: var(--white) !important;
+  border-color: var(--rose) !important;
+  box-shadow: 0 0 0 3px rgba(232, 165, 165, 0.2) !important;
+  outline: none !important;
 }
 
-/* Optioneel: hover effecten */
-button:hover, .Button:hover {
-  background: #ffd6e3 !important;
+input[type="search"]::placeholder,
+[data-test-id="search-box-input"]::placeholder {
+  color: var(--text-light) !important;
+}
+
+/* ─── Knoppen — Primair (rode Pinterest-knoppen) ─── */
+[data-test-id="save-button"],
+button[class*="red"],
+button[class*="Red"],
+.red,
+[class*="Button--primary"],
+[class*="button--primary"],
+.KS5yx,
+.tg4Vd {
+  background-color: var(--rose-deep) !important;
+  border-color: var(--rose-deep) !important;
+  color: #fff !important;
+  border-radius: 24px !important;
+  box-shadow: 0 2px 10px rgba(200, 120, 120, 0.3) !important;
+  transition: background 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+[data-test-id="save-button"]:hover,
+button[class*="red"]:hover,
+.KS5yx:hover {
+  background-color: var(--rose) !important;
+  box-shadow: 0 4px 16px rgba(200, 120, 120, 0.4) !important;
+}
+
+/* ─── Knoppen — Secundair / Ghost ─── */
+button[class*="secondary"],
+button[class*="ghost"],
+[class*="Button--secondary"],
+[class*="button--secondary"],
+.PrimaryButton {
+  background-color: var(--petal) !important;
+  border-color: var(--blush) !important;
+  color: var(--text) !important;
+  border-radius: 24px !important;
+}
+
+button[class*="secondary"]:hover {
+  background-color: var(--blush) !important;
+}
+
+/* ─── Linkermenu / Zijbalk ─── */
+[data-test-id="left-rail"],
+[class*="sideNav"],
+[class*="leftRail"],
+nav {
+  background-color: var(--white) !important;
+  border-right: 1px solid var(--blush) !important;
+}
+
+/* ─── Boards & kaarten ─── */
+[data-test-id="board-card"],
+[data-test-id="board-representation"],
+[class*="boardCard"],
+[class*="BoardCard"],
+.PinCard,
+.gestaltImage,
+[class*="pinCard"] {
+  background-color: var(--white) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 12px rgba(180, 130, 130, 0.1) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+[data-test-id="board-card"]:hover,
+[class*="boardCard"]:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(180, 130, 130, 0.18) !important;
+}
+
+/* ─── Pin overlay & acties ─── */
+[class*="pinActionBar"],
+[class*="PinActionBar"],
+[data-test-id="pin-action-bar"] {
+  background: linear-gradient(to top, rgba(253, 246, 240, 0.95), transparent) !important;
+}
+
+/* ─── Dropdown & menu's ─── */
+[class*="Dropdown"],
+[class*="dropdown"],
+[data-test-id="dropdown"],
+.Dropdown,
+[role="menu"],
+[role="listbox"] {
+  background-color: var(--white) !important;
+  border: 1px solid var(--blush) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px rgba(180, 120, 120, 0.15) !important;
+}
+
+[role="menuitem"]:hover,
+[role="option"]:hover {
+  background-color: var(--petal) !important;
+}
+
+/* ─── Modals / Dialogs ─── */
+[role="dialog"],
+[class*="Modal"],
+[class*="modal"],
+[data-test-id="modal"] {
+  background-color: var(--white) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 20px 60px rgba(150, 90, 90, 0.2) !important;
+}
+
+/* Modal overlay / backdrop */
+[class*="Overlay"],
+[class*="overlay"],
+[class*="backdrop"],
+[class*="Backdrop"] {
+  background-color: rgba(240, 210, 210, 0.5) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+/* ─── Pin detail pagina ─── */
+[data-test-id="pin-closeup-container"],
+[class*="CloseupContainer"],
+[class*="closeupContainer"] {
+  background-color: var(--white) !important;
+  border-radius: 24px !important;
+}
+
+/* ─── Profielpagina ─── */
+[data-test-id="profile-board-feed"],
+[class*="profileContainer"],
+[class*="ProfileContainer"] {
+  background-color: var(--cream) !important;
+}
+
+/* ─── Tekst & typografie ─── */
+h1, h2, h3,
+[class*="Title"],
+[class*="title"],
+[class*="Heading"],
+[class*="heading"] {
+  color: var(--text) !important;
+}
+
+p, span, div,
+[class*="body"],
+[class*="Body"] {
+  color: var(--text) !important;
+}
+
+a {
+  color: var(--rose-deep) !important;
+}
+
+a:hover {
+  color: var(--rose) !important;
+}
+
+/* ─── Iconen ─── */
+svg[class*="icon"],
+[class*="Icon"] > svg,
+[data-test-id*="icon"] svg {
+  fill: var(--text-light) !important;
+  color: var(--text-light) !important;
+}
+
+/* Actieve / hover iconen ─── */
+[class*="active"] svg,
+button:hover svg {
+  fill: var(--rose-deep) !important;
+  color: var(--rose-deep) !important;
+}
+
+/* ─── Tabs & Pills ─── */
+[role="tab"],
+[class*="Tab"],
+[class*="tab"] {
+  color: var(--text-light) !important;
+  border-bottom: 2px solid transparent !important;
+  transition: color 0.2s, border-color 0.2s !important;
+}
+
+[role="tab"][aria-selected="true"],
+[class*="Tab--active"],
+[class*="tab--active"] {
+  color: var(--rose-deep) !important;
+  border-bottom-color: var(--rose-deep) !important;
+}
+
+/* ─── Chips / Filter-tags ─── */
+[class*="Chip"],
+[class*="chip"],
+[class*="filter"],
+[class*="Filter"] {
+  background-color: var(--petal) !important;
+  border: 1px solid var(--blush) !important;
+  color: var(--text) !important;
+  border-radius: 20px !important;
+}
+
+[class*="Chip"]:hover,
+[class*="chip"]:hover {
+  background-color: var(--blush) !important;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blush);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rose);
+}
+
+/* ─── Selectie ─── */
+::selection {
+  background-color: var(--blush);
+  color: var(--text);
+}
+
+/* ─── Laadanimaties / Skeletons ─── */
+[class*="skeleton"],
+[class*="Skeleton"],
+[class*="placeholder"],
+[class*="loading"] {
+  background: linear-gradient(
+    90deg,
+    var(--petal) 25%,
+    var(--beige) 50%,
+    var(--petal) 75%
+  ) !important;
+  background-size: 200% 100% !important;
+  animation: shimmer 1.6s infinite !important;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ─── Notificatie-badge ─── */
+[class*="badge"],
+[class*="Badge"],
+[class*="notification"],
+[class*="Notification"] {
+  background-color: var(--rose-deep) !important;
+  color: white !important;
+}
+
+/* ─── Footer ─── */
+footer,
+[class*="Footer"],
+[class*="footer"] {
+  background-color: var(--beige) !important;
+  border-top: 1px solid var(--blush) !important;
+  color: var(--text-light) !important;
+}
+
+/* ─── Hover op afbeeldingen — zachte roze gloed ─── */
+[data-test-id="pin-visual-wrapper"]:hover,
+[class*="pinWrapper"]:hover {
+  filter: brightness(0.97) saturate(1.05) !important;
+}
+
+/* ─── Tooltip ─── */
+[role="tooltip"],
+[class*="Tooltip"],
+[class*="tooltip"] {
+  background-color: var(--text) !important;
+  color: var(--cream) !important;
+  border-radius: 8px !important;
+  font-size: 12px !important;
 }
