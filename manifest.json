@@ -5,7 +5,13 @@
   "description": "Geef Pinterest een lichtroze, wit en lichtbeige thema.",
   "content_scripts": [
     {
-      "matches": ["*://www.pinterest.*/*"],
+      "matches": [
+        "https://www.pinterest.com/*",
+        "https://www.pinterest.nl/*",
+        "https://www.pinterest.de/*",
+        "https://www.pinterest.co.uk/*",
+        "https://www.pinterest.fr/*"
+      ],
       "js": ["content.js"],
       "css": ["styles.css"]
     }
