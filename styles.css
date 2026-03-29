@@ -35,6 +35,12 @@ header,
   background-color: var(--white) !important;
   border-bottom: 1px solid var(--blush) !important;
   box-shadow: 0 2px 16px rgba(200, 130, 130, 0.08) !important;
+    border-radius: 14px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0px 30px !important;
+  margin-top: -2px;
+  margin-left: -40px;
 }
 
 /* ─── Zoekbalk ─── */
