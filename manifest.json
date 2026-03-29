@@ -10,16 +10,11 @@
         "https://www.pinterest.nl/*",
         "https://www.pinterest.de/*",
         "https://www.pinterest.co.uk/*",
-        "https://www.pinterest.fr/*"
+        "https://www.pinterest.fr/*",
+        "https://nl.pinterest.com/*"
       ],
       "js": ["content.js"],
       "css": ["styles.css"]
     }
-  ],
-  "icons": {
-    "16": "icon16.png",
-    "32": "icon32.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
-  }
+  ]
 }
