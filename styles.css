@@ -46,7 +46,7 @@ input[type="search"],
   background-color: var(--petal) !important;
   border: 1.5px solid var(--blush) !important;
   color: var(--text) !important;
-  border-radius: 24px !important;
+  border-radius: 14px !important;
 }
 
 input[type="search"]:focus,
